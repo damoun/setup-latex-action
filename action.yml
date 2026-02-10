@@ -7,7 +7,6 @@ runs:
       uses: actions/cache@v4
       with:
         path: |
-          /var/cache/apt/archives
           /usr/share/texlive
           /usr/share/texmf
           /var/lib/texmf
