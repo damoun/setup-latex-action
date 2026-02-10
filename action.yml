@@ -3,6 +3,15 @@ description: 'Install TeX Live with XeLaTeX support'
 runs:
   using: 'composite'
   steps:
+    - name: Cache TeX Live
+      uses: actions/cache@v4
+      with:
+        path: |
+          /var/cache/apt/archives
+          /usr/share/texlive
+          /usr/share/texmf
+          /var/lib/texmf
+        key: texlive-${{ runner.os }}-v1
     - name: Install TeX Live
       shell: bash
       run: |
