@@ -21,10 +21,7 @@ GitHub Action to install TeX Live with XeLaTeX support.
 
 ## Performance
 
-First run: ~1-2 minutes (installs packages and populates cache)
-Subsequent runs: ~10-30 seconds (restores from cache)
-
-Caches `/usr/share/texlive`, `/usr/share/texmf`, and `/var/lib/texmf`.
+~1-2 minutes per run (installs via apt-get). Faster than Docker-based solutions.
 
 ## License
 
