@@ -11,4 +11,5 @@ runs:
           texlive-xetex \
           texlive-latex-extra \
           texlive-latex-recommended \
+          texlive-fonts-recommended \
           latexmk
