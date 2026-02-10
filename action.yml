@@ -15,10 +15,14 @@ runs:
     - name: Install TeX Live
       shell: bash
       run: |
-        sudo apt-get update
-        sudo apt-get install -y --no-install-recommends \
-          texlive-xetex \
-          texlive-latex-extra \
-          texlive-latex-recommended \
-          texlive-fonts-recommended \
-          latexmk
+        if ! command -v xelatex &> /dev/null; then
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-xetex \
+            texlive-latex-extra \
+            texlive-latex-recommended \
+            texlive-fonts-recommended \
+            latexmk
+        else
+          echo "TeX Live already installed (from cache)"
+        fi
