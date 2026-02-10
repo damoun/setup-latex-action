@@ -1,0 +1,14 @@
+name: 'Setup LaTeX'
+description: 'Install TeX Live with XeLaTeX support'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install TeX Live
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends \
+          texlive-xetex \
+          texlive-latex-extra \
+          texlive-latex-recommended \
+          latexmk
