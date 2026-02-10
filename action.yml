@@ -1,5 +1,8 @@
 name: 'Setup LaTeX'
 description: 'Install TeX Live with XeLaTeX support'
+branding:
+  icon: 'file-text'
+  color: 'blue'
 runs:
   using: 'composite'
   steps:
