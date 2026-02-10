@@ -10,7 +10,7 @@ runs:
           /usr/share/texlive
           /usr/share/texmf
           /var/lib/texmf
-        key: texlive-${{ runner.os }}-v1
+        key: texlive-${{ runner.os }}-v2
     - name: Install TeX Live
       shell: bash
       run: |
